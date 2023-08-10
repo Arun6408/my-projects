@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stop Event Propagation Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="inner">
+            Inner Box (Click Me!)
+        </div>
+    </div>
+    <div class="box" id="outer">
+        Outer Box
+    </div>
+
+    <script>
+        const innerBox = document.getElementById("inner");
+        const outerBox = document.getElementById("outer");
+
+        innerBox.addEventListener("click", function(event) {
+            // This will stop the click event from propagating to the outerBox.
+            event.stopPropagation();  
+
+            alert("Inner box clicked!");
+        });
+
+        outerBox.addEventListener("click", function() {
+            alert("Outer box clicked!");
+        });
+    </script>
+</body>
+</html>

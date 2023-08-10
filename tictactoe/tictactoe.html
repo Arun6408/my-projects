@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="leftbox">
+            <div class="p1">
+                <p id="player1"></p>
+                <p><span id="p1won"></span>/5</p>
+            </div>
+        </div>
+        <div class="main">
+            <div class="gamebox">
+
+                <div class="firstrow">
+                    <div class="inputbox">
+                        <input readonly type="text" name="one" id="one" onclick="if(value === ''){value=token(); check()}" >
+                    </div>
+                    <div class="inputbox">
+                        <input type="text"readonly name="two" id="two" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                    <div class="inputbox">
+                        <input type="text"readonly name="three" id="three" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                </div>
+                <div class="secondrow">
+                    <div class="inputbox">
+                        <input type="text" readonly name="four" id="four" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" readonly name="five" id="five" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" readonly name="six" id="six" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                </div>
+                <div class="thirdrow">
+                    <div class="inputbox">
+                        <input type="text" readonly name="seven" id="seven" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" readonly name="eight" id="eight" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" readonly name="nine" id="nine" onclick="if(value === ''){value=token(); check()}">
+                    </div>
+                </div>
+            
+            </div>
+            <input class="reset" type="reset" onclick="reset();" value="Reset the board">
+        </div>
+        <div class="rightbox">
+            <div class="p2">
+                <p id="player2"></p>
+                <p><span id="p2won"></span>/5</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

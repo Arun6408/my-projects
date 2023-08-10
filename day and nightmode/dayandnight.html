@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input[type="checkbox"]{
+            visibility: hidden;
+            display: none;
+        }
+        .check{
+            position: relative;
+            display: block;
+            width:80px;
+            height: 40px;
+            background-color: #200053;
+            cursor: pointer;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all ease-in 0.5s;
+            box-shadow: 5px 5px 110px 0px rgb(43, 43, 43),
+                   inset 1px 1px 1px 0px #fff ;
+        }
+        input[type="checkbox"]:checked ~.check{
+            background: #fff;
+            box-shadow: 0px 0px 0px 1200px #200053;
+        
+        }
+        .check:before{
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 33%;
+            border-radius: 50%;
+            width: 40%;
+            height: 80%;
+            background: #fff;
+        }
+        input[type="checkbox"]:checked ~.check:before{
+            transition: all ease-in-out 0.5s;
+            transform: translate(18px);
+            background-color: #200053;
+        }
+        input[type="checkbox"]:not(:checked) ~.check:before{
+            transition: all ease-in-out 0.5s;
+            transform: translate(-20px);
+            background-color: #fff;
+        }
+        .total{
+            width: 70%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;    
+        }
+        .box .text{
+            width: 45%;
+            height: 100%;
+            padding: 2%;
+            border:2px solid #200053;
+            color: #200053;
+            background-color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+        .box{
+            width: 100%;
+            height: 17%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .text p{
+            font-size: small;
+        }
+        input[type="checkbox"]:checked ~ .box .text {
+            transition: all ease-in-out 0.5s;
+            border: 2px solid #fff;
+            color: #fff;
+            font-weight: 500;
+            background-color: #200053;
+          }
+          
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label>
+            <input type="checkbox">
+            <span class="check"></span>
+        </label>
+        <div class="total">
+
+            <div class="box">
+                <div class="text"><h3>Heading</h3><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque ipsa dignissimos incidunt saepe, odit vel eligendi, nihil quidem modi placeat facilis quasi vero quos voluptate! Officiis numquam cupiditate veniam asperiores?</p></div>
+                <div class="text"><h3>Heading</h3><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid dignissimos porro alias, dolorum molestias illo facilis suscipit beatae eius reiciendis dicta provident sed expedita vero, animi nesciunt. Ducimus odit error vitae eos.</p></div>
+            </div>
+            <div class="box">
+                <div class="text"><h3>Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus mollitia eius, ipsam amet ad ab quod perspiciatis, ullam, recusandae repudiandae quo aperiam illum quos quibusdam. Tempora nemo dolorum commodi dolore.</p></div>
+                <div class="text"><h3>Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus mollitia eius, ipsam amet ad ab quod perspiciatis, ullam, recusandae repudiandae quo aperiam illum quos quibusdam. Tempora nemo dolorum commodi dolore.</p></div>
+            </div>
+            <div class="box">
+                <div class="text"><h3>Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus mollitia eius, ipsam amet ad ab quod perspiciatis, ullam, recusandae repudiandae quo aperiam illum quos quibusdam. Tempora nemo dolorum commodi dolore.</p></div>
+                <div class="text"><h3>Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus mollitia eius, ipsam amet ad ab quod perspiciatis, ullam, recusandae repudiandae quo aperiam illum quos quibusdam. Tempora nemo dolorum commodi dolore.</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
